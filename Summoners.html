@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title id="title">League of Legends</title>
+<link rel="stylesheet" type="text/css" href="LOL.css">
+<link rel="short icon" type="image/x-icon" href="lol.png">
+
+<meta charset="utf-8"/>
+</head>
+<body id="all">
+<script src="lol.js"></script>
+<ul class="u1">
+<img class="pic" src="list.png" id="TOP" align="left">
+<li class="i2" style="opacity:0">...................................................................................</li>
+
+<li class="i1"><a class="a1" id="H" href="Home.html" onclick="change('HOME')">HOME</a></li>
+
+<li class="i1"><a class="a1" id="C" href="index.html" onclick="change('CHAMPIONS')">CHAMPIONS</a></li>
+
+<li class="i1"><a class="a1" id="R" href="Items.html" onclick="change('RUNES')">ITEMS</a></li>
+
+<li class="i1"><a class="main" id="S" href="Summoners.html" onclick="window.location.reload()" onclick="change('SUMMONERS')">GAMES</a></li>
+
+</ul>
+<br><br><br><br><br><br>
+<div id="sums">
+<div style="display:none;position:relative" class="data" id="data">
+
+<table>
+<tr>
+<td id="case"><img class="img" width="95px" height="90px" id="Icon" src=""/>
+<div style="position:absolute;width:210px;top:0;left:0;padding-top:73px;;padding-left:30.7px;;font-size:16px;z-index:5;">
+<p id="lvl" style="position:absolute;width:210px;top:0;left:0;padding-top:68px;;padding-left:42.5px;;font-size:16px;z-index:5;color:silver" title="Summonner Level" ></p>
+<svg id="svg" class="sv" width="35" height="35">
+  <circle cx="20" cy="20" r="14" stroke="#c9aa71" stroke-width="2" fill="black"/>
+</svg></div>
+<div style="position:absolute;top:250px;left:400px;font-size:30px;color:white" id="Game"></div>
+</td><td id="Sum" class="sum"></td>
+</tr>
+</table>
+
+</div>
+<center>
+<div id="bgdiv" style="display:none" class="bgdiv">
+<table class="tablestyle">
+<thead class="theadstyle" style="border-bottom: 6px solid rgb(19,117,132)">
+<tr>
+<th>Name</th>
+<th>Champion</th>
+<th>Spells</th>
+</tr>
+</thead>
+<tbody class="tbodystyle">
+<tr>
+<td id="Name1" class="tdstyle"></td>
+<td id="Champion1" class="tdstyle1"></td>
+<td class="tdstyle2"><img height="20px" width="20px" src="" id="spell1"></img><div id="spelldiv1"></div><br style="clear:left"><img style="" height="20px" width="20px" src="" id="spell11"/><div id="spell1div1"></div></td>
+</tr>
+<tr>
+<td id="Name2" class="tdstyle"></td>
+<td id="Champion2" class="tdstyle1"></td>
+<td class="tdstyle2"><img height="20px" width="20px" src="" id="spell2"></img><div id="spelldiv2"></div><br style="clear:left"><img height="20px" width="20px" src="" id="spell12"/><div id="spell1div2"></div></td>
+</tr>
+<tr>
+<td id="Name3" class="tdstyle"></td>
+<td id="Champion3" class="tdstyle1"></td>
+<td class="tdstyle2"><img height="20px" width="20px" src="" id="spell3"></img><div id="spelldiv3"></div><br style="clear:left"><img height="20px" width="20px" src="" id="spell13"/><div id="spell1div3"></div></td>
+</tr>
+<tr>
+<td id="Name4" class="tdstyle"></td>
+<td id="Champion4" class="tdstyle1"></td>
+<td class="tdstyle2"><img height="20px" width="20px" src="" id="spell4"></img><div id="spelldiv4"></div><br style="clear:left"><img height="20px" width="20px" src="" id="spell14"/><div id="spell1div4"></div></td>
+</tr>
+<tr>
+<td id="Name5" class="tdstyle"></td>
+<td id="Champion5" class="tdstyle1"></td>
+<td class="tdstyle2"><img height="20px" width="20px" src="" id="spell5"></img><div id="spelldiv5"></div><br style="clear:left"><img height="20px" width="20px" src="" id="spell15"/><div id="spell1div5"></div></td>
+</tr>
+</tbody>
+</table>
+<p style="font-weight: bold;font-size: 16px;color:white">VS</p>
+</div>
+<div id="bgdiv1" style="display:none" class="bgdiv1">
+<table class="tablestyle">
+<thead class="theadstyle">
+<tr>
+<th>Name</th>
+<th>Champion</th>
+<th>Spells</th>
+</tr>
+</thead>
+<tbody class="tbodystyle">
+<tr>
+<td id="Name6" class="tdstyle"></td>
+<td id="Champion6" class="tdstyle1"></td>
+<td class="tdstyle2"><img height="20px" width="20px" src="" id="spell6"></img><div id="spelldiv6"></div><br style="clear:left"><img height="20px" width="20px" src="" id="spell16"/><div id="spell1div6"></div></td>
+</tr>
+<tr>
+<td id="Name7" class="tdstyle"></td>
+<td id="Champion7" class="tdstyle1"></td>
+<td class="tdstyle2"><img height="20px" width="20px" src="" id="spell7"></img><div id="spelldiv7"></div><br style="clear:left"><img height="20px" width="20px" src="" id="spell17"/><div id="spell1div7"></div></td>
+</tr>
+<tr>
+<td id="Name8" class="tdstyle"></td>
+<td id="Champion8" class="tdstyle1"></td>
+<td class="tdstyle2"><img height="20px" width="20px" src="" id="spell8"></img><div id="spelldiv8"></div><br style="clear:left"><img height="20px" width="20px" src="" id="spell18"/><div id="spell1div8"></div></td>
+</tr>
+<tr>
+<td id="Name9" class="tdstyle"></td>
+<td id="Champion9" class="tdstyle1"></td>
+<td class="tdstyle2"><img height="20px" width="20px" src="" id="spell9"></img><div id="spelldiv9"></div><br style="clear:left"><img height="20px" width="20px" src="" id="spell19"/><div id="spell1div9"></div></td>
+</tr>
+<tr>
+<td id="Name10" class="tdstyle"></td>
+<td id="Champion10" class="tdstyle1"></td>
+<td class="tdstyle2"><img height="20px" width="20px" src="" id="spell10"></img><div id="spelldiv10"></div><br style="clear:left"><img height="20px" width="20px" src="" id="spell110"/><div id="spell1div10"></div></td>
+</tr>
+</tbody>
+</table>
+</div>
+</center>
+<br><br><br><br><br><br><br><br>
+<div align="center">
+
+<form id="f">
+<input id="PlayerName" type="text" placeholder="Summoner Name" required pattern="[a-zA-Z0-9 ]{2,}" />
+<br><br>
+<input type="button" onclick="getplayerbyname(id)" id="b2" value="Search Summoner!">
+</form>
+<input id="restart" style="position:absolute;top:300px;left:560px;display:none" type="button" onclick="window.location.reload()"  value="Search another Summoner!">
+
+</div>
+</div>
+</body>
+</html>
