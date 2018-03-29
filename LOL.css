@@ -143,6 +143,7 @@ border:1px solid grey
 	  }
 	
 	  .u1 {
+	z-index:6;	  
 	position: fixed;
 	margin-top: -0.6%;
 	margin-left:-2.1%;
