@@ -410,7 +410,7 @@ if(this.readyState == 4 && this.status==404)
 			
 			document.getElementById('f').style.display ='none';
 			document.getElementById('data').style.display ='inherit';
-			document.getElementById('title').innerHTML ="KiiRrAa - Leauge of legends";
+			document.getElementById('title').innerHTML =+playerinfo.name" - Leauge of legends";
 			
 			document.getElementById('restart').style.display ='inherit';
 	
