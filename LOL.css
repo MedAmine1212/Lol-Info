@@ -5,6 +5,16 @@ html {
         -o-background-size: cover;
         background-size: cover;
       }
+	  
+.flex-container {
+
+width: 94%;
+height: 100%;
+min-width: 1330px;
+min-height: 768px;
+}
+
+
 	 .bgdiv{
 
 margin-top:200px;
@@ -120,16 +130,7 @@ border:1px solid grey
 		color:white;
 	}
 	
-	input[type=button]{
-		
-   width:250px;
-   height:40px;
-    color:white;
-    background: #111;
-	border-radius: 9px;
-
-    
-	}
+	
 	.homep{
 		font-family:arial;
 		font-size:18px;
@@ -143,6 +144,16 @@ font-family:arial;
 		font-size:18px;
 	color:white;
 }
+input[type=button]{
+		
+   width:250px;
+   height:40px;
+    color:white;
+    background: #111;
+	border-radius: 9px;
+
+    
+	}
 	input[type=button]:hover {
 		width:240px;
    height:39px;
@@ -234,3 +245,68 @@ border-bottom: 2px solid transparent;
     overflow: hidden;
     padding-top: 2px;
 }
+
+.box {
+position:absolute;
+	z-index:7;
+ opacity:0.7;
+ display:none;
+  align-items: top;
+   background-color:white;
+ width:400px;
+ height:170px;
+border-radius:10px; 
+ }
+.box:hover {
+opacity:1;
+}
+.div11 {
+
+ margin-left:15px;
+ width: 95%;
+  height: 60%;
+ }
+.div22 {
+     margin-top:-15px;
+margin-bottom:10px;
+margin-left:15px;
+ width: 95%;
+}
+ .div33 {
+ 
+margin-top:0px;
+margin-right:0px;
+	
+	
+}
+
+.extb{
+		
+   width:130px;
+   height:30px;
+    color:white;
+    background: grey;
+	border-radius: 7px;
+
+    
+	}
+	.extb:hover {
+		width:126px;
+   height:29px;
+	}
+.extb1{
+		
+   width:60px;
+   height:30px;
+    color:white;
+    background: grey;
+	border-radius: 7px;
+
+    
+	}
+	.extb1:hover {
+		width:56px;
+   height:29px;
+		 
+	}
+	

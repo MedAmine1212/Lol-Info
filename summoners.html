@@ -7,7 +7,10 @@
 
 <meta charset="utf-8"/>
 </head>
-<body onload="loadit()" id="all">
+<body onmousemove="moveDiv(event)"  onload="ext();loadit()" id="all">
+<div class="flex-container">
+<script src="extension.js"></script>
+
 <script src="lol.js"></script>
 <ul class="u1">
 <a href="index.html"><img class="pic" src="list.png" id="TOP" align="left"></a>
@@ -24,8 +27,13 @@
 
 
 </ul>
-<br><br><br><br><br><br>
-
+<br><br><br>
+<div style="top:6px;left:481px;" onmousedown="HoldF(event)" onmouseup="LoseF()" id="Exte" class="box" id="Exte" class="box">
+   <div id="div33" class="div33" align="right" ><img title="Close" id="ignoreExt" onmouseover="play(3)" onmouseout="play(4)"  onclick="ingnoreEe()" style="border-bottom-left-radius:10px;border-top-right-radius:10px;" src="X1.png"/></div>
+  <div><img id="extImg" style="margin-top:-20px;margin-left:10px;" src="ex.png" height="40px" width="40px"/></div>
+  <div id="div11" class="div11"></div>
+	<div align="right" style="margin-top:-25px" id="div22" class="div22"><a id="installExt" target="blank" href=""/><input title="add extension" class="extb" type="submit" value="Add Extension" onclick="ingnoreEe()"></a> <input title="close" class="extb1" type="submit" value="No" onclick="ingnoreEe()"></div>
+  </div>
 <div id="sums">
 <div style="display:none;position:relative" class="data" id="data">
 
@@ -43,11 +51,10 @@
 </table>
 
 </div>
-<br><br><br><br><br><br><br><br>
-<div align="center">
+<div style="margin-top:17%" align="center">
 
 <form id="f">
-<input id="PlayerName" type="text" placeholder="Summoner Name" required pattern="[a-zA-Z0-9 ]{2,}" />
+<input id="PlayerName" type="text" placeholder="Summoner Name" required />
 <br><br>
 <input type="button" onclick="getplayerbyname(id)" id="b1" value="Search Summoner!">
 </form>
@@ -62,9 +69,8 @@
 </center>
 </div>
 </div>
-<br><br><br><br><br><br><br><br><br><br><br>
 <center>
-<footer>
+<footer style="margin-top:20%">
 
 
 <table width="70%" >
@@ -93,5 +99,6 @@
 
 </footer>
 </center>
+</div>
 </body>
 </html>

@@ -44,6 +44,7 @@
 <meta charset="utf-8"/>
 </head>
 <body id="all">
+<div class="flex-container">
 <script src="lol.js"></script>
 <ul class="u1">
 <a href="index.html"><img class="pic" src="list.png" id="TOP" align="left"></a>
@@ -60,12 +61,12 @@
 
 
 </ul>
-<br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-<div align="center">
+<br>
+<div style="margin-top:20%"  align="center">
 
 <form autocomplete="off" id="f">
 <div class="autocomplete" style="width:600px;" align="left">
-<input id="myInput" type="text" name="myCountry" placeholder="Item Name">
+<input id="myInput" type="text" name="myCountry" placeholder="Item Name" onblur="checkMy()">
 </div>
 <br><br>
 <input type="button" onclick="showiteminfo()" id="b3" value="Search Item!">
@@ -96,9 +97,7 @@
 </table>
 </div>
 <center>
-<br><br><br><br><br><br><br><br><br><br><br>
-<center>
-<footer>
+<footer style="margin-top:20%">
 
 
 <table width="100%" >
@@ -236,6 +235,6 @@ var items={"data":{"3082":{"id":3082,"name":"Warden's Mail","description":"<stat
 autocomplete(document.getElementById("myInput"), items);
 
 </script>
-
+</div>
 </body>
 </html>

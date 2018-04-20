@@ -6,7 +6,10 @@
 
 <meta charset="utf-8"/>
 </head>
-<body id="all">
+<body onmousemove="moveDiv(event)"  id="all" onload="ext()">
+<div class="flex-container">
+
+<script src="extension.js"></script>
 <script src="lol.js"></script>
 <ul class="u1">
 <a href="index.html"><img class="pic" src="list.png" id="TOP" align="left"></a>
@@ -23,7 +26,14 @@
 
 
 </ul>
-<br><br><br><br><br><br>
+<br><br><br>
+<div  style="top:6px;left:481px;" style="position:absolute z-index:7;" onmousedown="HoldF(event)" onmouseup="LoseF()" id="Exte" class="box">
+   <div id="div33" class="div33" align="right" ><img title="Close" id="ignoreExt" onmouseover="play(3)" onmouseout="play(4)"  onclick="ingnoreEe()" style="border-bottom-left-radius:10px;border-top-right-radius:10px;" src="X1.png"/></div>
+  <div><img id="extImg" style="margin-top:-20px;margin-left:10px;" src="ex.png" height="40px" width="40px"/></div>
+  <div id="div11" class="div11"></div>
+	<div align="right" id="div22" class="div22"><a id="installExt" target="blank" href=""/><input title="add extension" class="extb" type="submit" value="Add Extension" onclick="ingnoreEe()"></a> <input title="close" class="extb1" type="submit" value="No" onclick="ingnoreEe()"></div>
+  </div>
+      
 <div id="sums">
 <div style="display:none;position:relative" class="data" id="data">
 
@@ -35,16 +45,26 @@
 <svg id="svg" class="sv" width="35" height="35">
   <circle cx="20" cy="20" r="14" stroke="#c9aa71" stroke-width="2" fill="black"/>
 </svg></div>
-<div style="position:absolute;top:250px;left:400px;font-size:30px;color:white" id="Game"></div>
-</td><td id="Sum" class="sum"></td>
+</td>
+<td id="Sum" class="sum"></td>
 </tr>
 </table>
+</div>
+<div style="margin-top:17%"  align="center">
+<form id="f">
+<input id="PlayerName" type="text" placeholder="Summoner Name" required/>
+<br><br>
+<input type="button" onclick="getplayerbyname(id)" id="b2" value="Search Game!">
+</form>
+<input id="restart" style="position:absolute;top:300px;left:560px;display:none" type="button" onclick="window.location.reload()"  value="Search another Game!"/>
+<span style="font-size:35px;color:white" id="Game"></span>
 
 </div>
-<br><br><br><br><br>
 <h1 id="gameType" style="display:none;color:white;position:absolute"></h1>
 <center>
-<div id="bgdiv" style="display:none" class="bgdiv">
+
+
+<div id="bgdiv" style="margin-top:25%;display:none" class="bgdiv">
 <table class="tablestyle">
 <thead class="theadstyle" style="border-bottom: 6px solid rgb(19,117,132)">
 <tr>
@@ -122,21 +142,9 @@
 </table>
 </div>
 </center>
-<br><br><br>
-<div align="center">
-
-<form id="f">
-<input id="PlayerName" type="text" placeholder="Summoner Name" required pattern="[a-zA-Z0-9 ]{2,}" />
-<br><br>
-<input type="button" onclick="getplayerbyname(id)" id="b2" value="Search Game!">
-</form>
-<input id="restart" style="position:absolute;top:300px;left:560px;display:none" type="button" onclick="window.location.reload()"  value="Search another Game!">
-
 </div>
-</div>
-<br><br><br><br><br><br><br><br><br><br><br>
 <center>
-<footer>
+<footer style="margin-top:20%">
 
 
 <table width="70%" >
@@ -165,5 +173,6 @@
 
 </footer>
 </center>
+</div>
 </body>
 </html>
