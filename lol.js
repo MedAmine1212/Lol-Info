@@ -434,10 +434,6 @@ function ingnoreEe()
 function showiteminfo()
 {
 var itemName=document.getElementById("myInput").value;
-if (itemName.length==0)
-	checkMy();
-else
-{
 for(var item in items.data){
 if(items.data[item].name===itemName)
 {
@@ -446,15 +442,19 @@ document.getElementById('itemName').innerHTML =items.data[item].name;
 document.getElementById('itemimg').src =imgurl;
 document.getElementById('itemdes1').innerHTML =items.data[item].description;
 document.getElementById('itemdes2').innerHTML =items.data[item].plaintext;
-break;
-}
-}
 document.getElementById('itemnfo').style.display ='inherit';
 document.getElementById('restart').style.display ='inherit';
 document.getElementById('f').style.display ='none';
+break;
 }
-}
+else
+{
+document.getElementById("myInput").focus();
+document.getElementById("myInput").style.border ="1px solid red";
 
+}
+}
+}
 function loadit(){
 if(window.location.href.indexOf("getplayerbyname")==-1)
 return;
@@ -465,12 +465,4 @@ getplayerbyname("b3",1,decodeURI(window.location.href.split("&")[1]));
 function def()
 {
 	document.getElementById("Icon").src="missing.png";
-}
-function checkMy(){
-
-if(document.getElementById("myInput").value.length==0)
-{
-	document.getElementById("myInput").focus();
-	document.getElementById("myInput").style.border="1px solid red";
-}
 }
