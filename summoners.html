@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title id="title">League of Legends</title>
+<link rel="stylesheet" type="text/css" href="LOL.css">
+<link rel="short icon" type="image/x-icon" href="lol.png">
+
+<meta charset="utf-8"/>
+</head>
+<body onmousemove="moveDiv(event)"  onload="ext();loadit()" id="all">
+
+<script src="extension.js"></script>
+
+<script src="lol.js"></script>
+<ul class="u1">
+<a href="index.html"><img class="pic" src="list.png" id="TOP" align="left"></a>
+
+<li style="margin-left:33%" class="i1"><a class="a1" id="H" href="index.html">HOME</a></li>
+
+<li class="i1"><a class="main" id="C" href="summoners.html">SUMMONERS</a></li>
+
+<li class="i1"><a class="a1" id="R" href="items.html">ITEMS</a></li>
+
+<li class="i1"><a class="a1" id="S" href="games.html">GAMES</a></li>
+
+
+</ul>
+<br><br><br>
+<div align="center">
+<img src="image.png" class="bgimg"/>
+</div>
+
+<div style="top:6px;left:481px;" onmousedown="HoldF(event)" onmouseup="LoseF()" id="Exte" class="box" id="Exte" class="box">
+   <div id="div33" class="div33" align="right" ><img title="Close" id="ignoreExt" onmouseover="play(3)" onmouseout="play(4)"  onclick="ingnoreEe()" style="border-bottom-left-radius:10px;border-top-right-radius:10px;" src="X1.png"/></div>
+  <div><img id="extImg" style="margin-top:-20px;margin-left:10px;" src="ex.png" height="40px" width="40px"/></div>
+  <div id="div11" class="div11"></div>
+	<div align="right" style="margin-top:-25px" id="div22" class="div22"><a id="installExt" target="blank" href=""/><input title="add extension" class="extb" type="submit" value="Add Extension" onclick="ingnoreEe()"></a> <input title="close" class="extb1" type="submit" value="No" onclick="ingnoreEe()"></div>
+  </div>
+<div id="sums">
+<div style="display:none;position:relative" class="data" id="data">
+
+<table>
+<tr>
+<td id="case"><img class="img" width="95px" height="90px" id="Icon"  onerror="def()" src=""/>
+<div style="position:absolute;width:210px;top:0;left:0;padding-top:73px;;padding-left:30.7px;;font-size:16px;z-index:5;">
+<p id="lvl" style="position:absolute;width:210px;top:0;left:0;padding-top:68px;;padding-left:42.5px;;font-size:16px;z-index:5;color:silver" title="Summonner Level" ></p>
+<svg id="svg" class="sv" width="35" height="35">
+  <circle cx="20" cy="20" r="14" stroke="#c9aa71" stroke-width="2" fill="black"/>
+</svg></div>
+</td><td id="Sum" class="sum"></td>
+</tr>
+</table>
+
+</div>
+<br><br>
+<div id="marg" style="margin-top:17%" align="center">
+
+<form id="f">
+<input id="PlayerName" type="text" placeholder="Summoner Name" required />
+<br><br>
+<input type="button" onclick="getplayerbyname(id)" id="b1" value="Search Summoner!">
+</form>
+
+<input id="restart" style="display:none" type="button" onclick="window.location.reload()"  value="Search another Summoner!">
+</div>
+<br>
+<div id="data1" style="display:none">
+
+<h2>Owned champions:</h2>
+<center>
+<table width="94%" style="border-collapse:collapse;background:black;opacity:0.9;margin-top:6px;margin-left:6px; margin-right:6px" id="champions"></table>
+</center>
+</div>
+</div>
+<center>
+<footer style="margin-top:20%">
+
+
+<table width="70%">
+<tr align="center">
+<td>
+<img width="130px" height="100px" src="riot.png"></img>
+</td>
+<td style="padding-left:80px">
+<a href="http://signup.euw.leagueoflegends.com/en"><img id="playit" src="play.png" onmouseover="play(2)" onmouseout="play()"></img></a>
+</td>
+<td>
+<a href="http://pvp.net"><img src="pvp.png"></img></a><br>
+<p style="font-size:11px;font-family:arial;color:#c1c0c0"><a title="Sign up now" href="http://signup.euw.leagueoflegends.com/en" style="color:#c1c0c0;text-decoration:none">SIGNUP</a> | <a title="Contact a support" href="https://support.riotgames.com/hc/en-us" style="color:#c1c0c0;text-decoration:none">SUPPORT</a></p>
+</td>
+</tr>
+<tr align="center">
+<td rowspan="2">
+<a target="blank" class="facebook" href="https://www.facebook.com/LeagueOfLegendsFROfficial" title=""><img title="Facebook Page" class="img1" src="facebook.png"></img></a>
+<a target="blank" class="youtube" href="https://www.youtube.com/LeagueofLegendsFR" title=""><img title="Youtube Channel" class="img1" src="youtube.png"></img></a>
+<a target="blank" class="twitter" href="https://twitter.com/LoL_France" title=""><img title="Twitter" width="30px" height="30px" src="twitter.png"></img></a>
+</td>
+</tr>
+</table>
+<hr width="50%">
+<p align="center" style="color:white">© 2018 League of legends Info', By Med Amine Khaili, KiiRrAa.</p> 
+
+</footer>
+</center>
+
+</body>
+</html>
