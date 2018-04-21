@@ -1,0 +1,178 @@
+<html>
+<head>
+<title id="title">League of Legends</title>
+<link rel="stylesheet" type="text/css" href="LOL.css">
+<link rel="short icon" type="image/x-icon" href="lol.png">
+
+<meta charset="utf-8"/>
+</head>
+<body onmousemove="moveDiv(event)"  id="all" onload="ext()">
+
+<script src="extension.js"></script>
+<script src="lol.js"></script>
+<ul class="u1">
+<a href="index.html"><img class="pic" src="list.png" id="TOP" align="left"></a>
+
+<li style="margin-left:32.7%" class="i1"><a class="a1" id="H" href="index.html">HOME</a></li>
+
+<li class="i1"><a class="a1" id="C" href="summoners.html">SUMMONERS</a></li>
+
+<li class="i1"><a class="a1" id="R" href="items.html">ITEMS</a></li>
+
+<li class="i1"><a class="main" id="S" href="games.html">GAMES</a></li>
+
+
+</ul>
+<br><br><br>
+<div align="center">
+<img src="image.png" class="bgimg"/>
+</div>
+<div  style="top:6px;left:481px;" style="position:absolute z-index:7;" onmousedown="HoldF(event)" onmouseup="LoseF()" id="Exte" class="box">
+   <div id="div33" class="div33" align="right" ><img title="Close" id="ignoreExt" onmouseover="play(3)" onmouseout="play(4)"  onclick="ingnoreEe()" style="border-bottom-left-radius:10px;border-top-right-radius:10px;" src="X1.png"/></div>
+  <div><img id="extImg" style="margin-top:-20px;margin-left:10px;" src="ex.png" height="40px" width="40px"/></div>
+  <div id="div11" class="div11"></div>
+	<div align="right" id="div22" class="div22"><a id="installExt" target="blank" href=""/><input title="add extension" class="extb" type="submit" value="Add Extension" onclick="ingnoreEe()"></a> <input title="close" class="extb1" type="submit" value="No" onclick="ingnoreEe()"></div>
+  </div>
+      
+<div id="sums">
+<div style="display:none;position:relative" class="data" id="data">
+
+<table>
+<tr>
+<td id="case"><img class="img" width="95px" height="90px" id="Icon" onerror="def()" src=""/>
+<div style="position:absolute;width:210px;top:0;left:0;padding-top:73px;;padding-left:30.7px;;font-size:16px;z-index:5;">
+<p id="lvl" style="position:absolute;width:210px;top:0;left:0;padding-top:68px;;padding-left:42.5px;;font-size:16px;z-index:5;color:silver" title="Summonner Level" ></p>
+<svg id="svg" class="sv" width="35" height="35">
+  <circle cx="20" cy="20" r="14" stroke="#c9aa71" stroke-width="2" fill="black"/>
+</svg></div>
+</td>
+<td id="Sum" class="sum"></td>
+</tr>
+</table>
+</div>
+<br>
+<div style="margin-top:17%" align="center">
+<form id="f">
+<input id="PlayerName" type="text" placeholder="Summoner Name" required/>
+<br><br>
+<input type="button" onclick="getplayerbyname(id)" id="b2" value="Search Game!">
+</form>
+<input id="restart" style="top:50%;left:40.5%;position:absolute;display:none" type="button" onclick="window.location.reload()"  value="Search another Game!"/>
+<span style="font-size:35px;color:white" id="Game"></span>
+
+</div>
+<h1 id="gameType" style="display:none;color:white;position:absolute"></h1>
+<center>
+
+
+<div id="bgdiv" style="margin-top:25%;display:none" class="bgdiv">
+<table class="tablestyle">
+<thead class="theadstyle" style="border-bottom: 6px solid rgb(19,117,132)">
+<tr>
+<th>Name</th>
+<th>Champion</th>
+<th>Spells</th>
+</tr>
+</thead>
+<tbody class="tbodystyle">
+<tr>
+<td id="Name1" class="tdstyle"></td>
+<td class="tdstyle1"><img height="35px" width="35px" src="" id="chmapionimg1"></img><div id="Champion1" ></div></td>
+<td class="tdstyle2"><img height="20px" width="20px" src="" id="spell1"></img><div id="spelldiv1"></div><br style="clear:left"><img style="" height="20px" width="20px" src="" id="spell11"/><div id="spell1div1"></div></td>
+</tr>
+<tr>
+<td id="Name2" class="tdstyle"></td>
+<td class="tdstyle1"><img height="35px" width="35px" src="" id="chmapionimg2"></img><div id="Champion2" ></div></td>
+<td class="tdstyle2"><img height="20px" width="20px" src="" id="spell2"></img><div id="spelldiv2"></div><br style="clear:left"><img height="20px" width="20px" src="" id="spell12"/><div id="spell1div2"></div></td>
+</tr>
+<tr>
+<td id="Name3" class="tdstyle"></td>
+<td class="tdstyle1"><img height="35px" width="35px" src="" id="chmapionimg3"></img><div id="Champion3" ></div></td>
+<td class="tdstyle2"><img height="20px" width="20px" src="" id="spell3"></img><div id="spelldiv3"></div><br style="clear:left"><img height="20px" width="20px" src="" id="spell13"/><div id="spell1div3"></div></td>
+</tr>
+<tr>
+<td id="Name4" class="tdstyle"></td>
+<td class="tdstyle1"><img height="35px" width="35px" src="" id="chmapionimg4"></img><div id="Champion4" ></div></td>
+<td class="tdstyle2"><img height="20px" width="20px" src="" id="spell4"></img><div id="spelldiv4"></div><br style="clear:left"><img height="20px" width="20px" src="" id="spell14"/><div id="spell1div4"></div></td>
+</tr>
+<tr>
+<td id="Name5" class="tdstyle"></td>
+<td class="tdstyle1"><img height="35px" width="35px" src="" id="chmapionimg5"><div id="Champion5" ></div></img></td>
+<td class="tdstyle2"><img height="20px" width="20px" src="" id="spell5"></img><div id="spelldiv5"></div><br style="clear:left"><img height="20px" width="20px" src="" id="spell15"/><div id="spell1div5"></div></td>
+</tr>
+</tbody>
+</table>
+<p style="font-weight: bold;font-size: 16px;color:white">VS</p>
+</div>
+<div id="bgdiv1" style="display:none" class="bgdiv1">
+<table class="tablestyle">
+<thead class="theadstyle">
+<tr>
+<th>Name</th>
+<th>Champion</th>
+<th>Spells</th>
+</tr>
+</thead>
+<tbody class="tbodystyle">
+<tr>
+<td id="Name6" class="tdstyle"></td>
+<td class="tdstyle1"><img height="35px" width="35px" src="" id="chmapionimg6"></img><div id="Champion6" ></div></td>
+<td class="tdstyle2"><img height="20px" width="20px" src="" id="spell6"></img><div id="spelldiv6"></div><br style="clear:left"><img height="20px" width="20px" src="" id="spell16"/><div id="spell1div6"></div></td>
+</tr>
+<tr>
+<td id="Name7" class="tdstyle"></td>
+<td class="tdstyle1"><img height="35px" width="35px" src="" id="chmapionimg7"></img><div id="Champion7" ></div></td>
+<td class="tdstyle2"><img height="20px" width="20px" src="" id="spell7"></img><div id="spelldiv7"></div><br style="clear:left"><img height="20px" width="20px" src="" id="spell17"/><div id="spell1div7"></div></td>
+</tr>
+<tr>
+<td id="Name8" class="tdstyle"></td>
+<td class="tdstyle1"><img height="35px" width="35px" src="" id="chmapionimg8"></img><div id="Champion8" ></div></td>
+<td class="tdstyle2"><img height="20px" width="20px" src="" id="spell8"></img><div id="spelldiv8"></div><br style="clear:left"><img height="20px" width="20px" src="" id="spell18"/><div id="spell1div8"></div></td>
+</tr>
+<tr>
+<td id="Name9" class="tdstyle"></td>
+<td class="tdstyle1"><img height="35px" width="35px" src="" id="chmapionimg9"></img><div id="Champion9" ></div></td>
+<td class="tdstyle2"><img height="20px" width="20px" src="" id="spell9"></img><div id="spelldiv9"></div><br style="clear:left"><img height="20px" width="20px" src="" id="spell19"/><div id="spell1div9"></div></td>
+</tr>
+<tr>
+<td id="Name10" class="tdstyle"></td>
+<td class="tdstyle1"><img height="35px" width="35px" src="" id="chmapionimg10"></img><div id="Champion10" ></div></td>
+<td class="tdstyle2"><img height="20px" width="20px" src="" id="spell10"></img><div id="spelldiv10"></div><br style="clear:left"><img height="20px" width="20px" src="" id="spell110"/><div id="spell1div10"></div></td>
+</tr>
+</tbody>
+</table>
+</div>
+</center>
+</div>
+<center>
+<footer style="margin-top:20%">
+
+
+<table width="70%" >
+<tr align="center">
+<td>
+<img width="130px" height="100px" src="riot.png"></img>
+</td>
+<td style="padding-left:80px">
+<a href="http://signup.euw.leagueoflegends.com/en"><img id="playit" src="play.png" onmouseover="play(2)" onmouseout="play()"></img></a>
+</td>
+<td>
+<a href="http://pvp.net"><img src="pvp.png"></img></a><br>
+<p style="font-size:11px;font-family:arial;color:#c1c0c0"><a title="Sign up now" href="http://signup.euw.leagueoflegends.com/en" style="color:#c1c0c0;text-decoration:none">SIGNUP</a> | <a title="Contact a support" href="https://support.riotgames.com/hc/en-us" style="color:#c1c0c0;text-decoration:none">SUPPORT</a></p>
+</td>
+</tr>
+<tr align="center">
+<td rowspan="2">
+<a target="blank" class="facebook" href="https://www.facebook.com/LeagueOfLegendsFROfficial" title=""><img title="Facebook Page" class="img1" src="facebook.png"></img></a>
+<a target="blank" class="youtube" href="https://www.youtube.com/LeagueofLegendsFR" title=""><img title="Youtube Channel" class="img1" src="youtube.png"></img></a>
+<a target="blank" class="twitter" href="https://twitter.com/LoL_France" title=""><img title="Twitter" width="30px" height="30px" src="twitter.png"></img></a>
+</td>
+</tr>
+</table>
+<hr width="50%">
+<p align="center" style="color:white">© 2018 League of legends Info', By Med Amine Khaili, KiiRrAa.</p> 
+
+</footer>
+</center>
+</body>
+</html>
