@@ -238,12 +238,13 @@ border-bottom: 2px solid transparent;
 
 .box {
 position:absolute;
-	z-index:7;
- opacity:0.7;
- display:none;
-  align-items: top;
-   background-color:white;
- width:400px;
+z-index:7;
+opacity:0.7;
+display:none;
+align-items: top;
+background-color:white;
+width:400px;
+min-height:170px;
 border-radius:10px; 
  }
 .box:hover {
