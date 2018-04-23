@@ -18,6 +18,7 @@ var y={ "type": "summoner", "version": "8.6.1", "data": { "SummonerSiegeChampSel
 var ALLCHAMPS= new Object;
 var Allchampsbysum= new Object;
 var playerinfo= new Object;
+var tdcomp=1;
 var gameReady={"gameId":3580060973,"mapId":11,"gameMode":"CLASSIC","gameType":"MATCHED_GAME","gameQueueConfigId":430,"participants":[{"teamId":100,"spell1Id":7,"spell2Id":4,"championId":22,"profileIconId":513,"summonerName":"BratDovla","bot":false,"summonerId":20559256,"gameCustomizationObjects":[],"perks":{"perkIds":[8021,9101,9104,8014,8234,8236],"perkStyle":8000,"perkSubStyle":8200}},{"teamId":100,"spell1Id":12,"spell2Id":4,"championId":51,"profileIconId":786,"summonerName":"Blago88","bot":false,"summonerId":89977224,"gameCustomizationObjects":[],"perks":{"perkIds":[8005,9111,9104,8014,8234,8236],"perkStyle":8000,"perkSubStyle":8200}},{"teamId":100,"spell1Id":4,"spell2Id":3,"championId":223,"profileIconId":785,"summonerName":"NTX1","bot":false,"summonerId":25958980,"gameCustomizationObjects":[],"perks":{"perkIds":[8351,8304,8345,8347,8473,8451],"perkStyle":8300,"perkSubStyle":8400}},{"teamId":100,"spell1Id":4,"spell2Id":11,"championId":11,"profileIconId":1388,"summonerName":"Bandro97","bot":false,"summonerId":61543258,"gameCustomizationObjects":[],"perks":{"perkIds":[8008,9111,9104,8017,8138,8143],"perkStyle":8000,"perkSubStyle":8100}},{"teamId":100,"spell1Id":4,"spell2Id":14,"championId":84,"profileIconId":3175,"summonerName":"G4m3rl4nD","bot":false,"summonerId":87219161,"gameCustomizationObjects":[],"perks":{"perkIds":[8112,8126,8120,8135,9111,8014],"perkStyle":8100,"perkSubStyle":8000}},{"teamId":200,"spell1Id":4,"spell2Id":12,"championId":99,"profileIconId":3355,"summonerName":"KENSHINNN","bot":false,"summonerId":22817072,"gameCustomizationObjects":[],"perks":{"perkIds":[8229,8226,8233,8236,8136,8139],"perkStyle":8200,"perkSubStyle":8100}},{"teamId":200,"spell1Id":4,"spell2Id":3,"championId":117,"profileIconId":3167,"summonerName":"Urkel69","bot":false,"summonerId":22053001,"gameCustomizationObjects":[],"perks":{"perkIds":[8229,8226,8210,8236,8138,8105],"perkStyle":8200,"perkSubStyle":8100}},{"teamId":200,"spell1Id":14,"spell2Id":4,"championId":22,"profileIconId":25,"summonerName":"Maléficoman","bot":false,"summonerId":67683670,"gameCustomizationObjects":[],"perks":{"perkIds":[8005,9111,9104,8014,8234,8236],"perkStyle":8000,"perkSubStyle":8200}},{"teamId":200,"spell1Id":11,"spell2Id":4,"championId":64,"profileIconId":1590,"summonerName":"smagda","bot":false,"summonerId":97528966,"gameCustomizationObjects":[],"perks":{"perkIds":[8112,8126,8120,8135,9111,8014],"perkStyle":8100,"perkSubStyle":8000}},{"teamId":200,"spell1Id":4,"spell2Id":11,"championId":20,"profileIconId":1436,"summonerName":"bretta007","bot":false,"summonerId":30082801,"gameCustomizationObjects":[],"perks":{"perkIds":[8010,9111,9104,8014,8139,8120],"perkStyle":8000,"perkSubStyle":8100}}],"observers":{"encryptionKey":"VpIgPW4aSvO/oKdhg19shRkYDDhrBloE"},"platformId":"EUW1","bannedChampions":[],"gameStartTime":0,"gameLength":0}
 
 //************************************************************************************************************************************************************
@@ -312,32 +313,33 @@ var inGame = new XMLHttpRequest();
 		
 		for(i=0;i<T1.length;i++)
 	{	
-       
-	if (gameReady.participants[i].teamId==200 && i<5)
-	{	
-		i=5;	
+        console.log(i);
+         console.log(tdcomp);
+	if ((gameReady.participants[i].teamId==200) && (tdcomp<6))
+	{
+		tdcomp=6;	
 	}
-		document.getElementById("tr"+(i+1)).style.display="inherit";
-		document.getElementById("Name"+(i+1)).innerHTML=tocheck[i].summonerName+"<br><span style=color:grey;display:none'>__________________________________</span> <input type='button' onclick=changename('"+encodeURI(tocheck[i].summonerName)+"') value='Check Player Informations'></button>";
-		document.getElementById("chmapionimg"+(i+1)).src="champs/"+T1[i]+".png";
-		document.getElementById("Champion"+(i+1)).innerHTML=T1[i];
-		document.getElementById("Champion"+(i+1)).style="float:left";
-		document.getElementById("chmapionimg"+(i+1)).style="float:left;margin-left:120px;margin-right:10px;margin-top:2px;margin-bottom:2px";
+		document.getElementById("tr"+tdcomp).style.display="inherit";
+		document.getElementById("Name"+tdcomp).innerHTML=tocheck[i].summonerName+"<br><span style=color:grey;display:none'>__________________________________</span> <input type='button' onclick=changename('"+encodeURI(tocheck[i].summonerName)+"') value='Check Player Informations'></button>";
+		document.getElementById("chmapionimg"+tdcomp).src="champs/"+T1[i]+".png";
+		document.getElementById("Champion"+tdcomp).innerHTML=T1[i];
+		document.getElementById("Champion"+tdcomp).style="float:left";
+		document.getElementById("chmapionimg"+tdcomp).style="float:left;margin-left:120px;margin-right:10px;margin-top:2px;margin-bottom:2px";
 		GetSpells(tocheck[i].spell1Id);
 		k++;
-		document.getElementById("spell"+(i+1)).src="Spells/"+T2[l]+".png";
-		document.getElementById("spell"+(i+1)).style="float:left;margin-right:2px;margin-top:2px;margin-bottom:2px";
-		document.getElementById("spelldiv"+(i+1)).innerHTML=T2[l];
-		document.getElementById("spelldiv"+(i+1)).style="float:left";
+		document.getElementById("spell"+tdcomp).src="Spells/"+T2[l]+".png";
+		document.getElementById("spell"+tdcomp).style="float:left;margin-right:2px;margin-top:2px;margin-bottom:2px";
+		document.getElementById("spelldiv"+tdcomp).innerHTML=T2[l];
+		document.getElementById("spelldiv"+tdcomp).style="float:left";
 		GetSpells(tocheck[i].spell2Id);
 		k++;
-		document.getElementById("spell1"+(i+1)).src="Spells/"+T2[c]+".png";
-		document.getElementById("spell1div"+(i+1)).innerHTML=T2[c];
-		document.getElementById("spell1div"+(i+1)).style="float:left";
-		document.getElementById("spell1"+(i+1)).style="float:left;margin-right:2px;margin-top:2px;margin-bottom:2px";
+		document.getElementById("spell1"+tdcomp).src="Spells/"+T2[c]+".png";
+		document.getElementById("spell1div"+tdcomp).innerHTML=T2[c];
+		document.getElementById("spell1div"+tdcomp).style="float:left";
+		document.getElementById("spell1"+tdcomp).style="float:left;margin-right:2px;margin-top:2px;margin-bottom:2px";
 		l+=2;
 		c+=2;
-	
+	   tdcomp++;
   }
 	}
   }  
