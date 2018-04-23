@@ -312,7 +312,8 @@ var inGame = new XMLHttpRequest();
 		
 		for(i=0;i<T1.length;i++)
 	{	
-	if (gameReady.teamId==200)
+       
+	if (gameReady.participants[i].teamId==200 && i<5)
 	{	
 		i=5;	
 	}
