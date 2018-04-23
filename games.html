@@ -6,7 +6,7 @@
 
 <meta charset="utf-8"/>
 </head>
-<body onmousemove="moveDiv(event)"  id="all" onload="ext()">
+<body onmousemove="moveDiv(event)"  id="all" onload="imgfix();ext()">
 
 <script src="extension.js"></script>
 <script src="lol.js"></script>
@@ -25,7 +25,7 @@
 </ul>
 <br><br><br>
 <div align="center">
-<img src="image.png" class="bgimg"/>
+<img id="bgimg1" src="image.png" class="bgimg"/>
 </div>
 <div  style="top:6px;left:481px;position:absolute z-index:7;"onmousedown="HoldF(event)" onmouseup="LoseF()" id="Exte" class="box">
    <div id="div33" class="div33" align="right" ><img title="Close" id="ignoreExt" onmouseover="play(3)" onmouseout="play(4)"  onclick="ingnoreEe()" style="border-bottom-left-radius:10px;border-top-right-radius:10px;" src="X1.png"/></div>

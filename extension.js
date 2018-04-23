@@ -12,13 +12,11 @@ browser="edge";
   M=ua.match(/(opera|chrome|safari|firefox|trident(?=\/))\/?\s*(\d+)/i) || [];
 browser=M[1];
 }
-    function close_window() {
-  if (confirm("Are you sure?")) {
-    window.open('index.html','_self');
-  }
-  else
-	  ext();
-	 }
+function imgfix()
+{
+	if (browser=="trident")
+		document.getElementById("bgimg1").style.marginLeft="31.5%";
+}
 	 
 	function ext(){
 	
