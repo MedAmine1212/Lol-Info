@@ -10,16 +10,35 @@
 <body onload="imgfix()" id="all">
 <script src="extension.js"></script>
 <script src="lol.js"></script>
-<ul class="u1">
-<a href="index.html"><img class="pic" src="list.png" id="TOP" align="left"></a>
+<title id="title">League of Legends</title>
+<link rel="stylesheet" type="text/css" href="LOL.css">
+<link rel="short icon" type="image/x-icon" href="lol.png">
 
-<li style="margin-left:33%" class="i1"><a class="main" id="H" href="index.html">HOME</a></li>
+<meta charset="utf-8"/>
+</head>
+<body id="all">
+<ul class="u1">
+<a  href="index.html"><img onmouseenter="show()" class="pic" src="list.png" id="TOP" align="left"></a><div onmouseover="show()" onmouseout="hide()" style="display:none" id="d1">
+
+	<ul id="u2" class="u2">
+	
+	<li class="main1">HOME</li>
+
+	<li class="i2"><a class="a2" id="C1" href="summoners.html">INTRODUCTION</a></li>
+
+	<li class="i2"><a class="a2" id="R1" href="items.html">NEWS</a></li>
+
+	<li class="i2"><a class="a2" id="S1" href="games.html" >SIGN UP</a></li>
+	</ul></div >
+
+<li  style="margin-left:33%" class="i1"><a class="main" id="H" href="index.html">HOME</a></li>
 
 <li class="i1"><a class="a1" id="C" href="summoners.html">SUMMONERS</a></li>
 
 <li class="i1"><a class="a1" id="R" href="items.html">ITEMS</a></li>
 
 <li class="i1"><a class="a1" id="S" href="games.html">GAMES</a></li>
+	
 
 </ul>
 <br><br><br><br><br>
@@ -123,5 +142,40 @@ This pushes the map toward aggressive, high-intensity gameplay centered on team 
 
 </footer>
 </center>
+<script>
+	
+	
+	 
+	function show()
+	{
+		
+		document.getElementById("d1").style.display="inherit";
+		
+		
+	}
+	function hide()
+	{
+	
+		document.getElementById("d1").style.display="none";
+		h=false;
+		he=0;
+	
+	}
+function addHeight()
+{
+	if ((h==true)&&(he<37))
+	{console.log("hi");
+		he=he+1;
+	document.getElementById("u2").style.height=he+"%";
+	console.log(document.getElementById("u2").style.height);
+}
+}
+function Timer() {
+             
+              setInterval(addHeight, 20);
+              
+          }	
+	
+</script>
 </body>
 </html>
