@@ -111,7 +111,7 @@ border:1px solid grey;
 	  }
 	  input[type=text]{
 		  background:#111;
-		width: 600px;
+		width: 600px;	
 		padding: 12px 20px;
 		margin: 2px;
 		display: inline-block;
@@ -182,7 +182,19 @@ input[type=button]{
     overflow: hidden;
     background-color: #000;
 }
-	
+	  .u3 {
+	z-index:6;
+	position: fixed;
+	margin-top: -0.6%;
+	margin-left:6%;
+ 	width:83.7%;
+	opacity: 1;
+	float:left;
+	height:50px;
+    list-style-type: none;
+    overflow: hidden;
+    background-color: #000;
+}	
 .i1 {
 	
     float: left;
@@ -238,13 +250,13 @@ border-bottom: 2px solid transparent;
 
 .box {
 position:absolute;
-z-index:7;
-opacity:0.7;
-display:none;
-align-items: top;
-background-color:white;
-width:400px;
-min-height:170px;
+	z-index:7;
+ opacity:0.7;
+ display:none;
+  align-items: top;
+   background-color:white;
+ width:400px;
+ min-height:170px;
 border-radius:10px; 
  }
 .box:hover {
@@ -299,4 +311,95 @@ margin-right:0px;
    height:29px;
 		 
 	}
+
+
+
+
+
+
+		  .div4{
+	z-index:6;
+	position: fixed;
+	margin-top: -0.6%;
+	margin-left:-2.1%;
+	padding-left:3%;
+ 	width:100%;
+	opacity: 1;
+	float:left;
+	height:50px;
+    list-style-type: none;
+    overflow: hidden;
+    background-color: #000;
+}
 	
+
+
+.main1{
+
+    text-decoration:none;
+    color: white;
+    
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 55px;
+	margin-bottom:1em;
+    margin-right:1em;
+    margin-left:1.7em;
+	padding-top:10px;
+	border-bottom: 3px solid #1ca1a9;
+	padding-bottom:12.2px;
+
+	}
+
+.main2{
+
+    text-decoration:none;
+	border: 1px solid transparent;
+    color: #1ca1a9/*#c9aa71*/;
+    display: inline-block;
+    font-size: 16px;
+    font-weight: bolder;
+    line-height: 48px;
+    margin-right:1em;
+	margin-left:1em;
+	overflow: hidden;
+    padding-top: 2px;
+	}
+
+.main2:hover {
+	color: white;
+    }
+
+
+	.d5{
+	opacity: 0.8;
+	z-index:6;
+	position: fixed;
+	top:50px;
+	left:-1%;
+	padding-left:1%;
+ 	width:16%;
+ 	border-radius:15px;
+	float:left;
+	height:10px;
+    list-style-type: none;
+    overflow: hidden;
+    background-color: #000;
+}
+
+
+	}
+.a2 {
+    text-decoration:none;
+	border: 1px solid transparent;
+    color: #1ca1a9/*#c9aa71*/;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 48px;
+	margin-top:0.1em;
+	margin-bottom:1em;
+    margin-right:1em;
+	margin-left:1em;
+	overflow: hidden;
+    padding-top: 2px;
+}

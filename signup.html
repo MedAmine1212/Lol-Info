@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<style>
+	.container {
+  position: relative;
+  width: 100%;
+}
+
+.trans {
+  position:relative;
+  height:281px;
+  width:450px;
+  margin:0 auto;
+}
+
+.trans img {
+  position:absolute;
+  left:0;
+  -webkit-transition: opacity 1s ease-in-out;
+  -moz-transition: opacity 1s ease-in-out;
+  -o-transition: opacity 1s ease-in-out;
+  transition: opacity 1s ease-in-out;
+}
+
+.trans img.image1:hover {
+  opacity:0;
+}
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 90%;
+  height:110%;
+  width:180%;
+  right: 0;
+  opacity: 0;
+  transition: 1s ease-in-out;
+  background
+  }
+
+.container:hover .overlay {
+  opacity: 1;
+}
+
+.text {
+  width:70%;
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+.av
+{
+  float: left;
+  width: 100px;
+  height: 100px;
+  margin: 10px;
+  border: 1px solid white;
+}
+
+.av1
+{
+  float: left;
+  width: 70px;
+  height: 70px;
+  margin: 10px;
+  border: 1px solid white;
+}
+canvas {
+    border:1px solid #d3d3d3;
+    background-color: grey;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: 0.4}
+  to {opacity: 0.8}
+  to {opacity: 1}
+}
+
+
+</style>
+<title id="title">League of Legends</title>
+<link rel="stylesheet" type="text/css" href="LOL.css">
+<link rel="short icon" type="image/x-icon" href="lol.png">
+
+<meta charset="utf-8"/>
+</head>
+<body onload="imgfix()" id="all">
+
+<audio id="music" loop autoplay>
+  <source src="music.mp3" type="audio/mpeg">
+Your browser does not support the audio element.
+</audio>
+
+<script src="extension.js"></script>
+<script src="lol.js"></script>
+<div onmouseleave="HideList()">
+<div class="div4">
+<img class="pic" src="list.png" onmouseover="ShowList()" id="TOP" align="left"/>
+
+</div>
+<img style="z-index:6;position:absolute;top:3.2%;left:4.2%" onmouseover="ShowList()" width="15px" height="15px" src="arrow.png"/>
+
+<div class="d5" style="display:none" id="d1">
+	<a href="index.html" class="main2">HOME</a><br>
+
+	<label class="main2" id="m1" onclick="PlayMusic()">STOP MUSIC</label><br>
+
+	<a class="main2" id="R1" href="game.html">PLAY OUR GAME</a><br>
+
+	<label  class="main1" id="S1">SIGN UP</label>
+</div>
+<ul class="u3">
+
+<li  style="margin-left:33%" class="i1"><a class="a1" id="H" href="index.html">HOME</a></li>
+
+<li class="i1"><a class="a1" id="C" href="summoners.html">SUMMONERS</a></li>
+
+<li class="i1"><a class="a1" id="R" href="items.html">ITEMS</a></li>
+
+<li class="i1"><a class="a1" id="S" href="games.html">GAMES</a></li>
+	
+
+</ul>
+</div>
+<br><br><br><br><br>
+<div align="center">
+<img id="bgimg1" src="image.png" class="bgimg"/>
+</div>
+
+  <div style="top:3%;left:0%;width: 100%;position:absolute;z-index:-1" id="SlideShow">
+
+<div class="fade">
+  <img src="Fat_Poro.jpg" style="width:100%;height:100%">
+ 
+</div>
+
+<div class="fade">
+  <img src="jinxSlide.jpg" style="width:100%;">
+</div>
+
+<div class="fade">
+  <img src="1.jpg" style="width:100%">
+</div>
+
+<div class="fade">
+  <img src="teemo.png" style="width:100%">
+</div>
+<!--<div class="fade">
+  <img src="kata.jpg" style="width:100%">
+</div>-->
+</div>
+
+<div class="homep">
+
+  <div style="margin:5%">
+    <br><br>
+    <table width="100%">
+      <tr><td>
+<table width="80%">
+
+  <tr>
+    <td>Name:</td>
+    <td>
+      <input style="width:40%" type="text" class="txt" value="" placeholder="Name" name="i2"required />
+    </td>
+  </tr>
+  <tr>
+    <td>First Name:</td>
+    <td>
+      <input style="width:40%" type="text" class="txt" value="" placeholder="First Name" name="i3" required />
+   <br><br>
+    </td>
+  </tr>
+
+  <tr>
+    <td>Avatar</td>
+    <td>
+        <div class="av" id="tar" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+    </td>
+  </tr>
+</table>
+</td>
+<td>
+Chose Your Avatar. (Drag and Drop) <br><br>
+
+        <div class="av1" id="div2"><img draggable="true" ondragstart="drag(event)" id="drag1" src="jinx.png" style="width:100%;height:100%"/></div>
+        <div class="av1" id="div3"><img draggable="true" ondragstart="drag(event)" id="drag2" src="xayah.png"  style="width:100%;height:100%"/></div>
+        <div class="av1" id="div4"><img draggable="true" ondragstart="drag(event)" id="drag3" src="sona.png"  style="width:100%;height:100%"/></div>
+        <div class="av1" id="div5"><img draggable="true" ondragstart="drag(event)" id="drag4" src="poro2.png"  style="width:100%;height:100%"/></div>
+</td></tr>
+</table><br><br>
+  <input style="width:10%" type="button" value="Sign up !" ><br><br>
+</div>
+</div>
+<center>
+<footer style="margin-top:0%">
+
+
+<table width="70%" >
+<tr align="center">
+<td>
+<img width="130px" height="100px" src="riot.png"></img>
+</td>
+<td style="padding-left:80px">
+<a href="http://signup.euw.leagueoflegends.com/en"><img id="playit" src="play.png" onmouseover="play(2)" onmouseout="play()"></img></a>
+</td>
+<td>
+<a href="http://pvp.net"><img src="pvp.png"></img></a><br>
+<p style="font-size:11px;font-family:arial;color:#c1c0c0"><a title="Sign up now" href="http://signup.euw.leagueoflegends.com/en" style="color:#c1c0c0;text-decoration:none">SIGNUP</a> | <a title="Contact a support" href="https://support.riotgames.com/hc/en-us" style="color:#c1c0c0;text-decoration:none">SUPPORT</a></p>
+</td>
+</tr>
+<tr align="center">
+<td rowspan="2">
+<a target="blank" class="facebook" href="https://www.facebook.com/LeagueOfLegendsFROfficial" title=""><img title="Facebook Page" class="img1" src="facebook.png"></img></a>
+<a target="blank" class="youtube" href="https://www.youtube.com/LeagueofLegendsFR" title=""><img title="Youtube Channel" class="img1" src="youtube.png"></img></a>
+<a target="blank" class="twitter" href="https://twitter.com/LoL_France" title=""><img title="Twitter" width="30px" height="30px" src="twitter.png"></img></a>
+</td>
+</tr>
+</table>
+<hr width="50%">
+<p align="center" style="color:white">© 2018 League of legends Info', By Med Amine Khaili, KiiRrAa.</p> 
+
+</footer>
+</center>
+<script>
+	var intervalId;
+	h=false;
+		he=0;
+    slideIndex=0;
+showSlides();
+function ShowList(){
+	h=true;
+	document.getElementById("d1").style.display="inherit";
+	Timer();
+}
+
+function HideList(){
+		document.getElementById("d1").style.display="none";
+		h=false;
+		document.getElementById("d1").style.height=0+"%";
+	
+		he=0;  
+}
+
+function Timer() {
+     if (intervalId) {
+        clearInterval(intervalId);
+    }   
+    intervalId=setInterval(addHeight, 7);
+              
+          }
+
+function addHeight() {
+	if ((h==true)&&(he<40))
+	{
+		he=he+1;
+	document.getElementById("d1").style.height=he+"%";
+}
+	else
+	clearInterval(intervalId);
+	    
+}	
+function PlayMusic()
+{
+if(document.getElementById("m1").innerHTML=="STOP MUSIC")
+{
+	
+	document.getElementById("music").pause();
+	document.getElementById("music").currentTime = 0;
+
+	document.getElementById("m1").innerHTML="PLAY MUSIC";
+}
+else
+{
+
+	document.getElementById("music").play();
+
+	document.getElementById("m1").innerHTML="STOP MUSIC";	
+}
+	
+}
+
+
+function allowDrop(ev) {
+  ev.preventDefault();
+}
+
+function drag(ev) {
+  ev.dataTransfer.setData("text", ev.target.id);
+}
+i=0;
+var imgCopy;
+function drop(ev) {
+  ev.preventDefault();
+  
+  var data = ev.dataTransfer.getData("text");
+  imgCopy = document.getElementById(data).cloneNode(true);
+  imgCopy.id = i;
+if (i>0)
+{
+  var rmv=document.getElementById(i-1);
+ document.getElementById("tar").removeChild(rmv);
+
+}
+document.getElementById("tar").appendChild(imgCopy);
+
+i++;
+}
+
+
+function showSlides() {
+  var i;
+  var slides = document.getElementsByClassName("fade");
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) {slideIndex = 1}    
+ 
+  slides[slideIndex-1].style.display = "block";  
+  
+  setTimeout(showSlides, 5000);
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<style>
+  body
+  {
+    overflow: hidden;
+  }
+	.container {
+  position: relative;
+  width: 100%;
+}
+
+.trans {
+  position:relative;
+  height:281px;
+  width:450px;
+  margin:0 auto;
+}
+
+.trans img {
+  position:absolute;
+  left:0;
+  -webkit-transition: opacity 1s ease-in-out;
+  -moz-transition: opacity 1s ease-in-out;
+  -o-transition: opacity 1s ease-in-out;
+  transition: opacity 1s ease-in-out;
+}
+
+.trans img.image1:hover {
+  opacity:0;
+}
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 90%;
+  height:110%;
+  width:180%;
+  right: 0;
+  opacity: 0;
+  transition: 1s ease-in-out;
+  background
+  }
+
+.container:hover .overlay {
+  opacity: 1;
+}
+
+.text {
+  width:70%;
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+canvas {
+  display:none;
+    border:1px solid #d3d3d3;
+    background-color: black;
+    width:70%;
+
+}
+</style>
+<title id="title">League of Legends</title>
+<link rel="stylesheet" type="text/css" href="LOL.css">
+<link rel="short icon" type="image/x-icon" href="lol.png">
+
+<meta charset="utf-8"/>
+</head>
+<body onload="imgfix()" id="all">
+
+<audio id="music" loop autoplay>
+  <source src="music.mp3"/>
+Your browser does not support the audio element.
+</audio>
+
+<script src="extension.js"></script>
+<script src="lol.js"></script>
+<div onmouseleave="HideList()">
+<div class="div4">
+<img class="pic" src="list.png" onmouseover="ShowList()" id="TOP" align="left"/>
+
+</div>
+<img style="z-index:6;position:absolute;top:3.2%;left:4.2%" onmouseover="ShowList()" width="15px" height="15px" src="arrow.png"/>
+
+<div class="d5" style="display:none" id="d1">
+	<a  href="index.html" class="main2">HOME</a><br>
+
+	<label class="main2" id="m1" onclick="PlayMusic()">STOP MUSIC</label><br>
+
+	<label class="main1" id="R1">PLAY OUR GAME</label><br><br>
+
+	<a  class="main2" id="S1" href="signup.html" >SIGN UP</a>
+</div>
+<ul class="u3">
+
+<li  style="margin-left:33%" class="i1"><a class="a1" id="H" href="index.html">HOME</a></li>
+
+<li class="i1"><a class="a1" id="C" href="summoners.html">SUMMONERS</a></li>
+
+<li class="i1"><a class="a1" id="R" href="items.html">ITEMS</a></li>
+
+<li class="i1"><a class="a1" id="S" href="games.html">GAMES</a></li>
+	
+
+</ul>
+</div>
+<br><br><br>
+
+<div id="svgDIV" style="display:none;padding:40px;opacity:0.8;position:absolute;top:60%;left:33%">
+<label style="position:absolute;top:30%;left:11%;font-weight:bolder;font-size:24px;color:white" id="finish"></label>
+<svg width="600" style="border-radius:20px">
+   <rect width="400" height="100" style="fill:black;"/>
+</svg> 
+</div>
+<div title="Just a Tip :D" style="position:absolute;top:36%;left:5%;width:30%">
+  <label style="margin-left:3%;font-weight:bolder;font-size:24px;color:white">Up</label><br>
+<img src="fleche.png" /><br>
+  <label style="font-weight:bolder;font-size:24px;color:white">Down</label>
+
+</div>
+<label style="position:absolute;top:10%;left:90%;font-weight:bolder;font-size:24px;color:white" id="sc"></label>
+<label style="position:absolute;top:10%;left:1%;font-weight:bolder;font-size:24px;color:white" id="bl"></label>
+<div align="center">
+<img id="bgimg1" src="image.png" class="bgimg"/>
+</div>
+  <center>
+    <input type="button" style="margin-top:19%;margin-bottom:13%;width:20%;height:50px" id="startGame" value="Play" onclick="initialisate()"/>
+<canvas id="canv">
+  Your Browser Doesn't support Canvas !
+</canvas>
+</center>
+<br>
+
+
+<center>
+<footer >
+<hr width="50%">
+<p align="center" style="color:white">© 2018 League of legends Info', By Med Amine Khaili, KiiRrAa.</p> 
+
+</footer>
+</center>
+<script>
+
+ 
+function initialisate()
+{
+  minX=0;
+minY=0;
+Bullets=30;
+score=0;
+  document.getElementById('canv').style.display="inherit";
+  document.getElementById("startGame").style.display="none";
+  document.getElementById("svgDIV").style.display="none";
+  document.getElementById("sc").innerHTML="Score: "+score;
+  document.getElementById("bl").innerHTML="Bullets: "+Bullets;
+  
+  var canvas = document.getElementById('canv');
+  ctx = canvas.getContext('2d');
+  Gun = new Image();
+  Gun.src = "gamepic.png";
+  Gun.onload = function(){
+    x=canvas.width-50;
+    y=canvas.height-100;
+    ctx.drawImage(Gun, x,y );
+    interval3=setInterval(DrawMinion,1000);
+    interval=setInterval(shoot,500);
+  setTimeout(function()
+  {
+
+  interval2=setInterval(moveBullet,0);
+  
+},1010)
+}
+document.addEventListener("keydown",function(e){
+switch(e.keyCode)
+{
+  case 38:up();break;
+  case 40:down();break;
+}
+});
+
+function up()
+{
+  if(y-3>0)
+  {
+    ctx.clearRect(x,y,100,100);
+    y-=3;
+    ctx.drawImage(Gun, x,y );
+    
+}
+}
+
+function down()
+{
+
+  if(y+3<canvas.height-35)
+  {
+ ctx.clearRect(x,y,100,100);
+    y+=3;
+    ctx.drawImage(Gun, x,y );
+}
+}
+
+function DrawMinion()
+{
+  ctx.clearRect(minX,minY,100,100);
+  minX=Math.floor(Math.random() * 100) + 10; 
+  minY=Math.floor(Math.random() * 120) + 0;
+  minion= new Image();
+  minion.src="minion.png";
+  minion.onload=function(){
+   ctx.drawImage(minion,minX,minY);
+  
+  }
+}
+
+function calculScore()
+{
+  if((y>=minY-12)&&(y<=minY+19))
+   {
+      score++;
+   
+    document.getElementById("sc").innerHTML="Score: "+score;
+    
+  }
+}
+rmv=false;
+function shoot()
+{
+  if(Bullets>0)
+  {
+  ctx.clearRect(0,0,6,canvas.height);
+  ctx.fillStyle="white";
+  x1=x;
+  y1=y+12;
+  ctx.fillRect(x1,y1,4,1);
+  if(rmv==true)
+  {
+  Bullets--;
+  document.getElementById("bl").innerHTML="Bullets: "+Bullets;
+  }
+  rmv=true;
+  calculScore();
+  }
+  else
+  {
+    clearInterval(interval);
+    clearInterval(interval2);
+    clearInterval(interval3);
+  ctx.font = "30px Arial";
+  ctx.fillText("Game Over !",10,50);
+
+setTimeout(function()
+  {
+
+  document.getElementById('canv').style.display="none";
+  document.getElementById("startGame").style.display="inherit";
+  document.getElementById("startGame").value="Play Agian !";
+  document.getElementById("svgDIV").style.display="inherit";
+  document.getElementById("finish").innerHTML="You Scored "+score+" out of 30 Bullets.";
+  ctx.clearRect(0,0,canvas.width,canvas.height);
+},3000);  
+   
+   }  
+  }
+function moveBullet()
+{
+ ctx.clearRect(x1,y1,4,1);
+ x1-=2;
+ ctx.fillRect(x1,y1,4,1);
+  
+   
+}
+
+}
+	var intervalId;
+	h=false;
+		he=0;
+
+function ShowList(){
+	h=true;
+	document.getElementById("d1").style.display="inherit";
+	Timer();
+}
+
+function HideList(){
+		document.getElementById("d1").style.display="none";
+		h=false;
+		document.getElementById("d1").style.height=0+"%";
+	
+		he=0;  
+}
+
+function Timer() {
+     if (intervalId) {
+        clearInterval(intervalId);
+    }   
+    intervalId=setInterval(addHeight, 7);
+              
+          }
+
+function addHeight() {
+	if ((h==true)&&(he<40))
+	{
+		he=he+1;
+	document.getElementById("d1").style.height=he+"%";
+}
+	else
+	clearInterval(intervalId);
+	    
+}	
+function PlayMusic()
+{
+if(document.getElementById("m1").innerHTML=="STOP MUSIC")
+{
+	
+	document.getElementById("music").pause();
+	document.getElementById("music").currentTime = 0;
+
+	document.getElementById("m1").innerHTML="PLAY MUSIC";
+}
+else
+{
+
+	document.getElementById("music").play();
+
+	document.getElementById("m1").innerHTML="STOP MUSIC";	
+}
+	
+}
+</script>
+</body>
+</html>
