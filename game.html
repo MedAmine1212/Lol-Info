@@ -297,24 +297,25 @@ function HideList(){
 		he=0;  
 }
 
+
 function Timer() {
      if (intervalId) {
         clearInterval(intervalId);
     }   
-    intervalId=setInterval(addHeight, 7);
+    intervalId=setInterval(addHeight, 4);
               
           }
 
 function addHeight() {
-	if ((h==true)&&(he<40))
-	{
-		he=he+1;
-	document.getElementById("d1").style.height=he+"%";
+  if ((h==true)&&(he<260))
+  {
+    he=he+2;
+  document.getElementById("d1").style.height=he+"px";
 }
-	else
-	clearInterval(intervalId);
-	    
-}	
+  else
+  clearInterval(intervalId);
+      
+} 
 function PlayMusic()
 {
 if(document.getElementById("m1").innerHTML=="STOP MUSIC")

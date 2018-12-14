@@ -336,15 +336,15 @@ function Timer() {
      if (intervalId) {
         clearInterval(intervalId);
     }   
-    intervalId=setInterval(addHeight, 7);
+    intervalId=setInterval(addHeight, 4);
               
           }
 
 function addHeight() {
-	if ((h==true)&&(he<40))
+	if ((h==true)&&(he<260))
 	{
-		he=he+1;
-	document.getElementById("d1").style.height=he+"%";
+		he=he+2;
+	document.getElementById("d1").style.height=he+"px";
 }
 	else
 	clearInterval(intervalId);
